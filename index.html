@@ -911,4 +911,36 @@
         }
         
         function nextSlide() {
+<<<<<<< HEAD
             if (currentSl
+=======
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+        
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+        
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+        
+        // Initialize
+        updateSlide();
+    </script>
+</body>
+</html>
+>>>>>>> 2312586fbf966292b8b201d0f6dfccd876454c76
