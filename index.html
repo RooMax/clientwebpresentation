@@ -25,15 +25,16 @@
         }
         
         .header {
-            padding: 2rem;
+            padding: 1rem 1.5rem;
             border-bottom: 1px solid rgba(251, 191, 36, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-shrink: 0;
         }
         
         .logo {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
         }
         
@@ -52,8 +53,9 @@
         
         .content {
             flex: 1;
-            padding: 3rem;
+            padding: 1.5rem;
             overflow-y: auto;
+            min-height: 0;
         }
         
         .slide {
@@ -73,42 +75,43 @@
         }
         
         .slide-title {
-            font-size: 2.5rem;
+            font-size: 1.75rem;
             color: #fbbf24;
             margin-bottom: 0.5rem;
             font-weight: bold;
         }
         
         .slide-subtitle {
-            font-size: 1.25rem;
+            font-size: 1rem;
             color: #9ca3af;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .hero {
             text-align: center;
-            padding: 4rem 0;
+            padding: 2rem 0;
         }
         
         .hero-title {
-            font-size: 4rem;
+            font-size: 2.5rem;
             font-weight: bold;
             background: linear-gradient(to right, #fbbf24, #f59e0b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1rem;
         }
         
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.125rem;
             color: #d1d5db;
         }
         
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
         
         .feature-card {
@@ -116,44 +119,46 @@
         }
         
         .feature-icon {
-            width: 5rem;
-            height: 5rem;
+            width: 4rem;
+            height: 4rem;
             background: linear-gradient(135deg, #fbbf24, #f59e0b);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
         
         .feature-label {
             color: #fbbf24;
             font-weight: 600;
+            font-size: 0.95rem;
         }
         
         .info-box {
             background: linear-gradient(to right, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-radius: 0.5rem;
             border-left: 4px solid #fbbf24;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
         
         .info-title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: #fbbf24;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
         
         .info-list {
             list-style: none;
             color: #e5e7eb;
+            font-size: 0.95rem;
         }
         
         .info-list li {
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
             display: flex;
             align-items: start;
         }
@@ -161,19 +166,19 @@
         .info-list li:before {
             content: "●";
             color: #fbbf24;
-            margin-right: 1rem;
+            margin-right: 0.75rem;
             flex-shrink: 0;
         }
         
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem;
         }
         
         .tech-card {
             background: linear-gradient(135deg, rgba(251, 191, 36, 0.05), rgba(245, 158, 11, 0.05));
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 1rem;
             border: 1px solid rgba(251, 191, 36, 0.2);
         }
@@ -181,16 +186,16 @@
         .tech-header {
             display: flex;
             align-items: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         
         .tech-icon {
-            font-size: 2.5rem;
-            margin-right: 1rem;
+            font-size: 2rem;
+            margin-right: 0.75rem;
         }
         
         .tech-title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: #fbbf24;
             font-weight: bold;
         }
@@ -198,52 +203,54 @@
         .tech-list {
             list-style: none;
             color: #e5e7eb;
+            font-size: 0.95rem;
         }
         
         .tech-list li {
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
             display: flex;
             align-items: center;
         }
         
         .tech-list li:before {
             content: "";
-            width: 0.5rem;
-            height: 0.5rem;
+            width: 0.4rem;
+            height: 0.4rem;
             background: #fbbf24;
             border-radius: 50%;
-            margin-right: 0.75rem;
+            margin-right: 0.6rem;
+            flex-shrink: 0;
         }
         
         .timeline {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
         
         .timeline-header {
             background: linear-gradient(to right, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-radius: 0.5rem;
             border-left: 4px solid #fbbf24;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
         }
         
         .timeline-header-icon {
-            font-size: 2rem;
-            margin-right: 1rem;
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
         }
         
         .timeline-header-title {
-            font-size: 2rem;
+            font-size: 1.25rem;
             color: #fbbf24;
             font-weight: bold;
         }
         
         .timeline-item {
             position: relative;
-            padding-left: 2rem;
-            padding-bottom: 2rem;
+            padding-left: 1.5rem;
+            padding-bottom: 1.5rem;
             border-left: 2px solid rgba(251, 191, 36, 0.3);
         }
         
@@ -263,37 +270,39 @@
         
         .timeline-content {
             background: rgba(0, 0, 0, 0.4);
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-radius: 0.5rem;
             border: 1px solid rgba(251, 191, 36, 0.2);
         }
         
         .timeline-phase {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: #fbbf24;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
         
         .timeline-duration {
             color: #d1d5db;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
         }
         
         .timeline-description {
             color: #9ca3af;
+            font-size: 0.9rem;
         }
         
         .pricing-section {
             text-align: center;
-            padding: 2rem 0;
+            padding: 1.5rem 0;
         }
         
         .pricing-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: #fbbf24;
             font-weight: bold;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .price-box {
@@ -301,72 +310,74 @@
             padding: 2px;
             border-radius: 1rem;
             display: inline-block;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .price-inner {
             background: #000;
-            padding: 2rem 4rem;
+            padding: 1.5rem 3rem;
             border-radius: 1rem;
         }
         
         .price-amount {
-            font-size: 4rem;
+            font-size: 2.5rem;
             color: #fbbf24;
             font-weight: bold;
         }
         
         .package-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
         }
         
         .package-card {
             background: linear-gradient(135deg, rgba(251, 191, 36, 0.05), rgba(245, 158, 11, 0.05));
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-radius: 1rem;
             border: 1px solid rgba(251, 191, 36, 0.2);
             text-align: center;
         }
         
         .package-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
         }
         
         .package-title {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: #fbbf24;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
         
         .package-description {
             color: #d1d5db;
+            font-size: 0.9rem;
         }
         
         .includes-box {
             background: linear-gradient(to right, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-radius: 0.5rem;
             border-left: 4px solid #fbbf24;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
         
         .includes-title {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: #fbbf24;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
         
         .includes-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
             color: #e5e7eb;
+            font-size: 0.95rem;
         }
         
         .includes-item:before {
@@ -377,66 +388,70 @@
         
         .closing-section {
             text-align: center;
-            padding: 3rem 0;
+            padding: 2rem 0;
         }
         
         .closing-title {
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: bold;
             background: linear-gradient(to right, #fbbf24, #f59e0b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1rem;
         }
         
         .closing-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.125rem;
             color: #d1d5db;
             max-width: 800px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 2rem;
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
         }
         
         .stat-card {
             background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 1rem;
             border: 1px solid rgba(251, 191, 36, 0.3);
         }
         
         .stat-value {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #fbbf24;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
         
         .stat-label {
             color: #d1d5db;
+            font-size: 0.95rem;
         }
         
         .closing-note {
-            margin-top: 3rem;
-            font-size: 1.25rem;
+            margin-top: 2rem;
+            font-size: 1.1rem;
             color: #9ca3af;
         }
         
         .navigation {
-            padding: 2rem;
+            padding: 1rem 1.5rem;
             border-top: 1px solid rgba(251, 191, 36, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-shrink: 0;
+            gap: 1rem;
         }
         
         .nav-button {
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 1.25rem;
             border-radius: 0.5rem;
             border: none;
             font-weight: 600;
@@ -445,6 +460,8 @@
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s;
+            font-size: 0.95rem;
+            white-space: nowrap;
         }
         
         .nav-button:not(:disabled) {
@@ -456,6 +473,10 @@
             box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
         }
         
+        .nav-button:not(:disabled):active {
+            transform: scale(0.95);
+        }
+        
         .nav-button:disabled {
             background: #1f2937;
             color: #4b5563;
@@ -465,6 +486,8 @@
         .nav-dots {
             display: flex;
             gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
         .nav-dot {
@@ -474,6 +497,7 @@
             background: #4b5563;
             cursor: pointer;
             transition: all 0.3s;
+            flex-shrink: 0;
         }
         
         .nav-dot.active {
@@ -484,6 +508,108 @@
         
         .nav-dot:hover {
             background: #6b7280;
+        }
+        
+        /* Mobile specific styles */
+        @media (max-width: 768px) {
+            .header {
+                padding: 0.75rem 1rem;
+            }
+            
+            .logo {
+                font-size: 1.125rem;
+            }
+            
+            .slide-counter {
+                font-size: 0.75rem;
+            }
+            
+            .content {
+                padding: 1rem;
+            }
+            
+            .slide-title {
+                font-size: 1.5rem;
+            }
+            
+            .slide-subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .feature-icon {
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.5rem;
+            }
+            
+            .price-amount {
+                font-size: 2rem;
+            }
+            
+            .closing-title {
+                font-size: 1.5rem;
+            }
+            
+            .stat-value {
+                font-size: 1.5rem;
+            }
+            
+            .navigation {
+                padding: 0.75rem 1rem;
+            }
+            
+            .nav-button {
+                padding: 0.6rem 1rem;
+                font-size: 0.875rem;
+            }
+            
+            .nav-button span {
+                display: none;
+            }
+            
+            .nav-button:before {
+                content: '←';
+                font-size: 1.25rem;
+            }
+            
+            .nav-button#next-btn:before {
+                content: '→';
+            }
+            
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Tablet styles */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .slide-title {
+                font-size: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -736,13 +862,13 @@
         
         <div class="navigation">
             <button class="nav-button" id="prev-btn" onclick="prevSlide()">
-                ← Previous
+                <span>Previous</span>
             </button>
             
             <div class="nav-dots" id="dots-container"></div>
             
             <button class="nav-button" id="next-btn" onclick="nextSlide()">
-                Next →
+                <span>Next</span>
             </button>
         </div>
     </div>
@@ -779,35 +905,10 @@
             // Update buttons
             document.getElementById('prev-btn').disabled = currentSlide === 0;
             document.getElementById('next-btn').disabled = currentSlide === totalSlides - 1;
+            
+            // Scroll to top of content
+            document.querySelector('.content').scrollTop = 0;
         }
         
         function nextSlide() {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateSlide();
-            }
-        }
-        
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateSlide();
-            }
-        }
-        
-        function goToSlide(index) {
-            currentSlide = index;
-            updateSlide();
-        }
-        
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') nextSlide();
-            if (e.key === 'ArrowLeft') prevSlide();
-        });
-        
-        // Initialize
-        updateSlide();
-    </script>
-</body>
-</html>
+            if (currentSl
