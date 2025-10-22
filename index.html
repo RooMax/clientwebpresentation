@@ -911,9 +911,6 @@
         }
         
         function nextSlide() {
-<<<<<<< HEAD
-            if (currentSl
-=======
             if (currentSlide < totalSlides - 1) {
                 currentSlide++;
                 updateSlide();
@@ -938,9 +935,32 @@
             if (e.key === 'ArrowLeft') prevSlide();
         });
         
+        // Touch swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        document.querySelector('.content').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        document.querySelector('.content').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                // Swipe left - next slide
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                // Swipe right - previous slide
+                prevSlide();
+            }
+        }
+        
         // Initialize
         updateSlide();
     </script>
 </body>
 </html>
->>>>>>> 2312586fbf966292b8b201d0f6dfccd876454c76
